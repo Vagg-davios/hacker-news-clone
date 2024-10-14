@@ -1,0 +1,22 @@
+{
+  "name": "hacker-news-clone",
+  "live": "nodemon server.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --testTimeout=5000",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
