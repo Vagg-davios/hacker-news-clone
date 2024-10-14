@@ -1,7 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 
-const newsRoute = require('../routes/news.route');
+const newsRoute = require('../routes/newest.route');
 const pastRoute = require('../routes/past.route');
 const commentsRoute = require('../routes/comments.route');
 const askRoute = require('../routes/ask.route');
