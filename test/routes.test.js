@@ -72,9 +72,9 @@ describe('Test all routes', () => {
         expect(res.text).toBe('this is the jobs route')
     });
 
-    it('GET /submit should return correct response', async () => {
-        const res = await request(app).get('/submit');
+    it('POST /submit should return correct response', async () => {
+        const res = await request(app).post('/submit');
         expect(res.statusCode).toEqual(200);
-        expect(res.text).toBe('this is the submit route')
+        expect(res.text).toBe('this is the submit route');
     });
 });
