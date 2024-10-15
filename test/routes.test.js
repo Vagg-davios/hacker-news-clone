@@ -1,7 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 
-const newsRoute = require('../routes/news.route');
+const newsRoute = require('../routes/newest.route');
 const pastRoute = require('../routes/past.route');
 const commentsRoute = require('../routes/comments.route');
 const askRoute = require('../routes/ask.route');
@@ -12,7 +12,7 @@ const submitRoute = require('../routes/submit.route');
 const createAppWithRoutes = () => {
     const app = express();
 
-    app.use('/news', newsRoute);
+    app.use('/newest', newsRoute);
     app.use('/past', pastRoute);
     app.use('/comments', commentsRoute);
     app.use('/ask', askRoute);
@@ -30,10 +30,10 @@ describe('Test all routes', () => {
         app = createAppWithRoutes();  // Use provider
     });
 
-    it('GET /news should return correct response', async () => {
-        const res = await request(app).get('/news');
+    it('GET /newest should return correct response', async () => {
+        const res = await request(app).get('/newest');
         expect(res.statusCode).toEqual(200);
-        expect(res.text).toBe('this is the news route')
+        expect(res.text).toBe('this is the newest route')
     });
 
     it('GET /past should return correct response', async () => {

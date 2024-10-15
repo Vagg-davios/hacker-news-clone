@@ -2,7 +2,7 @@
   "name": "hacker-news-clone",
   "live": "nodemon server.js",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --testTimeout=5000",
     "start": "node app.js",
@@ -13,7 +13,9 @@
   "description": "",
   "dependencies": {
     "cross-env": "^7.0.3",
-    "express": "^4.21.1"
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",
