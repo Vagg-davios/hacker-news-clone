@@ -1,5 +1,11 @@
 const express = require('express');
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
+
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
+app.set('layout', 'layout');
+app.use(express.static('static'));
 
 const routes = [
     { path: '/newest', route: require('./routes/newest.route'), name: 'new' },
